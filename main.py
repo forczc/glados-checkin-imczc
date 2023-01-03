@@ -37,9 +37,9 @@ if __name__ == "__main__":
         message_all = f"{message_all}{message}\n"
 
     if -2 not in checkin_codes and checkin_codes.count(0) + checkin_codes.count(1) == len(checkin_codes):
-        title = "GLaDOS(872640...) check in successful"
+        title = "GLaDOS(8726..) check in successful"
     else:
-        title = "GLaDOS(872640...) check in failed"
+        title = "GLaDOS(8726..) check in failed"
     message_all = f"{title}\n{message_all}"
     message_all = re.sub("\n+","\n", message_all)
     if message_all.endswith("\n"): message_all = message_all[:-1]
