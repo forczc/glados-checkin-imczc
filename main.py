@@ -43,7 +43,7 @@ if __name__ == "__main__":
     message_all = f"{title}\n{message_all}"
     message_all = re.sub("\n+","\n", message_all)
     if message_all.endswith("\n"): message_all = message_all[:-1]
-    if message_all.find("Checkin!Get 1 Day") == -1: title = title + "(fail)"
+    if message_all.find("Checkin") == -1: title = title + "(fail)"
     message_sender.send_all(message_tokens= message_tokens, title = title, content = message_all)
 
     assert -2 not in checkin_codes, "At least one account login fails."
